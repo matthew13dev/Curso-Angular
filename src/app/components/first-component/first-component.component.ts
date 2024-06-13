@@ -10,6 +10,8 @@ export class FirstComponentComponent implements OnInit {
   age:number = 22;
   job:string = "Devevoper"
 
+  hobbies:string[]= ["play the guitar", "play the pian", "workout","church"]
+
   constructor() { }
 
   ngOnInit(): void {
