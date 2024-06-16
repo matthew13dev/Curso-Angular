@@ -1,13 +1,23 @@
-<h2 [ngStyle]="{
-  'font-size': size,
-   'fonte-family': font,
-   'color': color,
-   'padding': padding
+<div class="section">
+  <div class="container">
 
-  }">
-  Testando directiva de estilos/style
-</h2>
+    <div class="section--title">Comotente 3</div>
 
-<h2 [ngClass]="classes">Testando diretiva de classe 1</h2>
-<h2 [ngClass]="classes">Testando diretiva de classe 2</h2>
-<h2 [ngClass]="under">Testando diretiva de classe 3</h2>
+    <div class="section--content">
+      <h2 [ngStyle]="{
+        'font-size': size,
+         'fonte-family': font,
+         'color': color,
+         'padding': padding
+
+        }">
+        Testando directiva de estilos/style
+      </h2>
+
+      <h2 [ngClass]="classes">Testando diretiva de classe 1</h2>
+      <h2 [ngClass]="classes">Testando diretiva de classe 2</h2>
+      <h2 [ngClass]="under">Testando diretiva de classe 3</h2>
+    </div>
+
+  </div>
+</div>

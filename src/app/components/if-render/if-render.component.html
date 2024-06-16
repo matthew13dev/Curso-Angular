@@ -1,0 +1,14 @@
+<section class="section">
+  <div class="container">
+    <div class="section--title">Comotente 4 - IF RENDER</div>
+    <div class="section--content">
+      <div *ngIf="role === 'admin'; else nameNotFound">
+        <p>Estamos mostrando isso porque foi permitido.</p>
+        <h2>Admin: Matheus</h2>
+      </div>
+      <ng-template #nameNotFound>
+        Usuário não válido, conteúdo não disponivel.
+      </ng-template>
+    </div>
+  </div>
+</section>
