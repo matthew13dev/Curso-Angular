@@ -3,12 +3,14 @@
     <div class="section--title">Componente 7 - LIST RENDER</div>
     <div class="section--content">
       <h2>Animals</h2> <button (click)="showAnimals()" class="button">show</button>
-      <ul *ngIf="getActive()">
+      <h3> {{getAnimalDetails()}}</h3>
+      <ul *ngIf="getActiveAnimal()">
         <li *ngFor="let animal of animals" class="animal">
 
             <div class="left">
               <p>Name: {{animal.name}}</p>
-              <p>Name: {{animal.type}}</p>
+              <p>Type: {{animal.type}}</p>
+              <button (click)="showAge(animal)">Age</button>
             </div>
 
             <div class="right">
