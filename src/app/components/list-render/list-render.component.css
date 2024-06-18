@@ -1,0 +1,32 @@
+ul {
+  list-style: none;
+  overflow-y: scroll;
+  max-height: 40vh;
+}
+
+.animal{
+  padding: 10px 30px;
+  width: 80%;
+  border: 1px solid transparent;
+  transition: all 0.1s linear;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.animal:hover {
+  border: 1px solid orange;
+}
+
+.section--content{
+  overflow: hidden;
+}
+
+u .left{
+  display: flex;
+  flex: 1;
+}
+u .right{
+  display: flex;
+  background-color: #ddd;
+}

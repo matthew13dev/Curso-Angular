@@ -1,0 +1,21 @@
+<section class="section">
+  <div class="container">
+    <div class="section--title">Componente 7 - LIST RENDER</div>
+    <div class="section--content">
+      <h2>Animals</h2> <button (click)="showAnimals()" class="button">show</button>
+      <ul *ngIf="getActive()">
+        <li *ngFor="let animal of animals" class="animal">
+
+            <div class="left">
+              <p>Name: {{animal.name}}</p>
+              <p>Name: {{animal.type}}</p>
+            </div>
+
+            <div class="right">
+              <h2>IMAGE</h2>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
