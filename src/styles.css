@@ -7,6 +7,11 @@ h1 {
   padding: 50px 0px;
   border-bottom: 1px solid #989898;
   min-height: 50vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .section--title {
@@ -18,7 +23,7 @@ h1 {
   margin: 30px 00px;
   box-shadow: 0px 0px 3px 2px #999;
   padding: 30px 80px;
-  width: 100%;
+  width: calc(720px - 160px);
   transition: all 1s linear;
 }
 
