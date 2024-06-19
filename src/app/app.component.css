@@ -1,7 +1,39 @@
 body {
-padding-bottom: 500px;
+  max-height: 100%;
+  margin: 50px 0px;
+  padding: 0;
 }
 
 h1 {
   margin-bottom: -30px;
+}
+
+header {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  position: fixed;
+  top: 0;
+  background-color: white;
+}
+
+header ul{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+header a{
+  display: inline-block;
+  height: 100%;
+  padding: 3px 10px;
+  margin: 0px 10px;
+  border-bottom: 3px solid transparent;
+}
+header a:hover {
+  color: orange;
+  border-bottom: 3px solid orange;
 }

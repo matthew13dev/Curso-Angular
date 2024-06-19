@@ -5,18 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+<header>
+  <nav>
+    <ul>
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/list">List</a></li>
+      <li><a routerLink="/change">change</a></li>
+      <li><a routerLink="/directives">directives</a></li>
+      <li><a routerLink="/emitter">emitter</a></li>
+      <li><a routerLink="/events">events</a></li>
+      <li><a routerLink="/fisrt">fisrt</a></li>
+      <li><a routerLink="/if">if</a></li>
+      <li><a routerLink="/parent">parent</a></li>
+      <li><a routerLink="/pipes">pipes</a></li>
+      <li><a routerLink="/two">two</a></li>
+    </ul>
+  </nav>
+</header>
 <body>
   <div class="container">
     <h1>Meu Primeiro Projeto em Angular</h1>
-    <app-first-component></app-first-component>
-    <app-parent-data app-parent-data [name] = "userName" [userData] = "userData"></app-parent-data>
-    <app-directives></app-directives>
-    <app-if-render></app-if-render>
-    <app-events></app-events>
-    <app-emitter></app-emitter>
-    <app-list-render></app-list-render>
-    <app-pipes></app-pipes>
-    <app-two-way-binding></app-two-way-binding>
+    <router-outlet></router-outlet>
 
   </div>
 </body>
