@@ -3,21 +3,36 @@
     <div class="section--title">Componente 7 - LIST RENDER</div>
     <div class="section--content">
       <h2>Animals</h2> <button (click)="showAnimals()" class="button">show</button>
-      <h3> {{getAnimalDetails()}}</h3>
+
+        <h3> {{getAnimalDetails()}}</h3>
       <ul *ngIf="getActiveAnimal()">
         <li *ngFor="let animal of animals" class="animal">
 
-            <div class="left">
-              <p>Name: {{animal.name}}</p>
-              <p>Type: {{animal.type}}</p>
-              <button (click)="showAge(animal)">Age</button>
+            <div class="box">
+
+              <div class="left">
+                <p>Name: {{animal.name}}</p>
+                <p>Type: {{animal.type}}</p>
+                <menu>
+                  <button (click)="showAge(animal)">Age</button>
+                  <button (click)="removeAnimal(animal)">delete</button>
+                  <button (click)="add()">add</button>
+                </menu>
+              </div>
+
+              <div *ngIf="getAddAnimal()" class="right">
+                <form action="">
+                  <label for=""><input type="text" placeholder="Name"></label>
+                  <label for=""><input type="text" placeholder="Type"></label>
+                  <label for=""><input type="text" placeholder="Age"></label>
+                  <button>confirm</button>
+                </form>
+              </div>
             </div>
 
-            <div class="right">
-              <h2>IMAGE</h2>
-            </div>
+
         </li>
       </ul>
+      </div>
     </div>
-  </div>
 </section>

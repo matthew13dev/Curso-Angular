@@ -2,6 +2,7 @@ ul {
   list-style: none;
   overflow-y: scroll;
   max-height: 40vh;
+  width: 100%;
 }
 
 .animal{
@@ -22,11 +23,63 @@ ul {
   overflow: hidden;
 }
 
-u .left{
+.section--content .box {
   display: flex;
-  flex: 1;
+  justify-content: space-between;
+  width: 100%;
+  max-height: 170px;
 }
-u .right{
+menu {
   display: flex;
+  margin:0;
+  padding: 0;
+  gap: 5px;
+  width: inherit;
+
+}
+.left button {
+  width: 60px;
+  padding: 5px;
   background-color: #ddd;
+  border: none;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+.left button:hover {
+  background-color: #989898;
+}
+
+
+form {
+  padding: 10px;
+  width: 100%;
+  background-color: #ddd;
+}
+
+label{
+  margin-bottom: 10px;
+  display: block;
+}
+
+input{
+  padding: 5px;
+  outline: none;
+  border: 1px solid transparent;
+  transition: all 0.1s;
+}
+
+input:hover {
+  border: 1px solid orange;
+}
+
+form button {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid transparent;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+form button:hover {
+  border: 1px solid #000;
 }

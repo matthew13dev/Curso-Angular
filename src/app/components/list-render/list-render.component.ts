@@ -1,5 +1,8 @@
+import { ListService } from './../../services/list.service';
 import { Component, OnInit } from '@angular/core';
+
 import { Animal } from 'src/app/interfaces/Animal';
+
 @Component({
   selector: 'app-list-render',
   templateUrl: './list-render.component.html',
@@ -10,6 +13,7 @@ import { Animal } from 'src/app/interfaces/Animal';
 export class ListRenderComponent implements OnInit {
 
   private isActiveAnimal:boolean = false;
+  private addAnimal:boolean = false;
   private animalDetails!:string;
 
   animals: Animal[] = [
@@ -19,7 +23,7 @@ export class ListRenderComponent implements OnInit {
     {name:"Edna", type: "Horse", age: 9},
   ]
 
-  constructor() { }
+  constructor( private listService: ListService) { }
 
   ngOnInit(): void {
   }
@@ -40,5 +44,26 @@ export class ListRenderComponent implements OnInit {
 
   public getAnimalDetails():string{
     return this.animalDetails;
+  }
+
+
+
+  public removeAnimal(animal:Animal):void{
+
+    this.animalDetails = `O pet ${animal.name} foi deletado.`;
+
+    let newList: Animal[] = this.listService.remove(this.animals, animal);
+    this.animals = newList;
+  }
+
+  add(){
+    this.addAnimal = !this.getAddAnimal();
+  }
+  getAddAnimal(){
+    return this.addAnimal;
+  }
+  public confirmNewAnimal(animal:Animal):void{
+
+    this.animalDetails = `O pet ${animal.name} foi adiocionado.`;
   }
 }
