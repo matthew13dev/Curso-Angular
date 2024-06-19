@@ -1,0 +1,26 @@
+<section class="section">
+  <div class="container">
+    <div class="section--title">Componente 9 - TWO WAY BINDING</div>
+    <div class="section--content">
+      <form action="">
+        <h2>Login</h2>
+        <label>
+          <input type="text" [(ngModel)] = "name" name="name" placeholder="Username">
+        </label>
+
+        <label>
+          <input type="password" name="password" placeholder="Password">
+        </label>
+
+        <button (click)="send()">send</button>
+
+
+      </form>
+      <div *ngIf= "action">
+        <h3>Sucess</h3>
+        <p>User: {{name}}</p>
+
+      </div>
+    </div>
+  </div>
+</section>
