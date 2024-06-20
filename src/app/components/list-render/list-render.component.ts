@@ -16,14 +16,13 @@ export class ListRenderComponent implements OnInit {
   private addAnimal:boolean = false;
   private animalDetails!:string;
 
-  animals: Animal[] = [
-    {name:"Roberto", type: "Dog", age: 3},
-    {name:"Silvia", type: "Cat", age: 5},
-    {name:"Carlos", type: "Bird", age: 7},
-    {name:"Edna", type: "Horse", age: 9},
-  ]
+  animals: Animal[] = [];
 
-  constructor( private listService: ListService) { }
+
+
+  constructor( private listService: ListService) {
+    this.getAnimals();
+  }
 
   ngOnInit(): void {
   }
@@ -65,5 +64,11 @@ export class ListRenderComponent implements OnInit {
   public confirmNewAnimal(animal:Animal):void{
 
     this.animalDetails = `O pet ${animal.name} foi adiocionado.`;
+  }
+
+  public getAnimals(){
+    this.listService.getAll().subscribe((animals) => {
+      return this.animals = animals
+    });
   }
 }
