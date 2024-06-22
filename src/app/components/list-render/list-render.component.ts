@@ -51,8 +51,12 @@ export class ListRenderComponent implements OnInit {
 
     this.animalDetails = `O pet ${animal.name} foi deletado.`;
 
-    let newList: Animal[] = this.listService.remove(this.animals, animal);
+    let newList = this.animals.filter((animal_) => {
+      return animal_ !== animal
+    });
+
     this.animals = newList;
+    this.listService.remove(animal.id).subscribe();
   }
 
   add(){

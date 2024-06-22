@@ -10,16 +10,10 @@ export class ListService {
   private apiUrl:string = "http://localhost:3000/animals";
   constructor(private http: HttpClient) { }
 
-  public remove(animals:Animal[], animal:Animal): Animal[] {
+  public remove(id:number){
+    let url:string = `${this.apiUrl}/${id}`;
+    return this.http.delete<Animal>(url);
 
-    let newList = animals.filter((animal_) => {
-      return animal_ !== animal
-    });
-
-    return newList;
-  }
-
-  public add(animals:Animal[], animal:Animal) {
   }
 
   public getAll(): Observable<Animal[]>{
@@ -28,7 +22,7 @@ export class ListService {
 
   public getItem(id: number): Observable<Animal>{
 
-    let urlId:string = `${this.getApiURL()}/${id}`;
+    let urlId:string = `${this.apiUrl}/${id}`;
     return this.http.get<Animal>(urlId);
 
 
