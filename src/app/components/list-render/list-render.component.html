@@ -11,7 +11,7 @@
             <div class="box">
 
               <div class="left">
-                <p>Name: {{animal.name}}</p>
+                <p class="nameAnimal">Name: <a routerLink="/list/{{animal.id}}">{{animal.name}}</a></p>
                 <p>Type: {{animal.type}}</p>
                 <menu>
                   <button (click)="showAge(animal)">Age</button>

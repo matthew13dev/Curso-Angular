@@ -23,6 +23,18 @@ export class ListService {
   }
 
   public getAll(): Observable<Animal[]>{
-    return this.http.get<Animal[]>(this.apiUrl)
+    return this.http.get<Animal[]>(this.getApiURL())
+  }
+
+  public getItem(id: number): Observable<Animal>{
+
+    let urlId:string = `${this.getApiURL()}/${id}`;
+    return this.http.get<Animal>(urlId);
+
+
+  }
+
+  private getApiURL():string{
+    return this.apiUrl;
   }
 }
